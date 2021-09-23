@@ -70,3 +70,25 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+const cl = console.log;
+
+for (let index = 0; index < hogwarts.length; index++) {
+  const currentPerson = hogwarts[index];
+  let {firstName, lastName, house} = currentPerson;
+  if (house === "Gryffindor") {
+    cl(firstName + " " + lastName);
+  }
+}
+
+function teachersWithPets(array){
+  for (let index = 0; index < array.length; index++) {
+    const currentPerson = array[index];
+    let {firstName, lastName, house, pet, occupation} = currentPerson;
+    if ((pet != null) && (occupation === "Teacher")){
+      cl(firstName + " " + lastName);
+    }
+  }
+}
+cl(" ")
+teachersWithPets(hogwarts);
